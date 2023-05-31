@@ -1,0 +1,32 @@
+{
+  "name": "webdevproject",
+  "version": "1.0.0",
+  "description": "Chars first webdev project",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crhyeahgo/WebDevProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crhyeahgo/WebDevProject/issues"
+  },
+  "homepage": "https://github.com/crhyeahgo/WebDevProject#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.0.4"
+  }
+}
