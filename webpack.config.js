@@ -2,11 +2,25 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   mode: 'development',
+  devtool: 'source-map',  // switch to 'inline-source-map' to only provide sourcemap with webpack-dev-server
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      }
+    ]
   },
   plugins: [
    // Creates HTML file to serve the webpack bundles. Otherwise developer would have to manually update the script tags in the

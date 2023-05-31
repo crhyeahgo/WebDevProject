@@ -33,4 +33,6 @@ npm install --save-dev webpack  // Updates package.json, downloads webpack and d
 npm install --save-dev webpack-cli  // For webpack commands in the CLI
 npm install --save-dev webpack-dev-server  // Automatically recompiles code and serves it on a local dev server
 npm install --save-dev html-webpack-plugin  // Creates HTML files to serve the webpack bundles
+npm install --save-dev style-loader css-loader  // Supports importing a css file and adding it to the DOM
+npm install --savedev typescript ts-loader  // Supports importing and transpiling typescript files
 ```
