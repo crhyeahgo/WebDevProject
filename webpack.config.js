@@ -9,6 +9,9 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    extensions: ['.ts', '.js', '.json'] // Required for module resolution. ts files not resolved by default.
+  },
   module: {
     rules: [
       {
