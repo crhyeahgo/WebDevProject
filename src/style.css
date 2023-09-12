@@ -1,28 +1,28 @@
-/* TODO Charlotte uncomment these lines only when you understand them and have added comments to explain what they do s*/
-
-.top-nav-bar {
-  background-color: #333;
- /* overflow: hidden;*/
+body {
+  background-image: url(assets/stardew-background.png);
+  background-color: #007BA7; /* #007BA7 is cerulean */
+  background-size: cover; /* scales the origin image so that it covers background positioning area, (some parts may extend beyond area */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-/* Style the links inside the navigation bar */
-.top-nav-bar a {
- /* float: left;*/
-  color: #f2f2f2;
- /* text-align: center; */
- /* padding: 14px 16px;*/
-  /*text-decoration: none;*/
-  font-size: 17px;
+#title {
+  margin: 35px;
+  text-align: center;
+  font-size: 72px;
+  letter-spacing: 0.2em; /* spacing between each letter, where em is a unit representing the font-size for that element. in theory 1em equals the width of a lowercase m */
+  font-weight: 700; /* scale from 1-1000 where 1000 is the most bold */
+  text-shadow: gold 2px 2px 3px; /* parameters: color, x-offset, y-offset, blur radius */
+  flex: 0;
 }
 
-/* Change the color of links on hover */
-/*.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}*/
+#menu {
+  background-color: rgb(245 245 245 / 65%); /* color is whitesmoke, percentage is the opacity value */
+  margin: 0 15px 30px 15px; /* order is like a clock: top, right, bottom, left */
+  flex: 1
+}
 
-/* Add a color to the active/current link */
-/*.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}*/
+.menu-option {
+  height: 10px;
+}
