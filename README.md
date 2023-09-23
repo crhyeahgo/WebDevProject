@@ -2,8 +2,9 @@
 Exploration project to learn web development principles
 
 # Tasks
-Current task(s):  
-- Use bootstrap or some styling
+Current focuses:  
+- Styling main webpage
+- Serving app through GitHub Pages or AWS
 
 A list of tasks to explore if desired:
 - Decide app functionality. Diagram?

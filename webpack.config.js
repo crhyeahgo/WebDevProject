@@ -32,6 +32,12 @@ module.exports = {
       title: 'Charlotte\'s WebDev Project',
       template: path.resolve(__dirname, './src/index.html'),
     }),
+    new HtmlWebpackPlugin({
+      title: 'Personal Growth Tracker Page',
+      template: path.resolve(__dirname, './src/personal-growth-tracker/index.html'),
+      filename: 'personal-growth-tracker/index.html', // Output filename
+      chunks: [],
+    }),
   ],
   devServer: {
     static: './dist',  // Look for files in dist folder
