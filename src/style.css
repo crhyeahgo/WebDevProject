@@ -19,10 +19,49 @@ body {
 
 #menu {
   background-color: rgb(245 245 245 / 65%); /* color is whitesmoke, percentage is the opacity value */
-  margin: 0 15px 30px 15px; /* order is like a clock: top, right, bottom, left */
-  flex: 1
+  margin: 0 15px 30px 15px; /* margins are outside of border. param order is like a clock: top, right, bottom, left */
+  padding: 20px; /* padding is inside of the border */
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .menu-option {
-  height: 10px;
+  margin: 30px;
+}
+
+.menu-btn {
+  background-color: rgb(255, 212, 72);
+  padding: 10px;
+  border-radius: 12px; /* radius for rounded corners */
+  border-style: groove;
+  border-color: #a700a7;
+ /* box-shadow: gray 2px 1px 2px; *//* parameters: color, x-offset, y-offset, blur radius */
+}
+
+/* hover is a user action pseudo-class applied to menu-btn when element is hovered */
+.menu-btn:hover {
+  background-color: rgb(236, 197, 67);
+
+}
+
+/* active is a user action pseudo-class applied to menu-btn when button is currently activated by user input (mouse button down or touch tap) */
+.menu-btn:active {
+  box-shadow: inset 0px 0px 5px rgb(95, 79, 27); /* inset property puts shadow inside element. px parameters: x-offset, y-offset, blur radius */
+
+}
+
+.menu-btn-image {
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+  background-image: url(./assets/smiley.svg); 
+}
+
+.menu-btn-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  text-align: center;
+  padding: 2px;
 }
