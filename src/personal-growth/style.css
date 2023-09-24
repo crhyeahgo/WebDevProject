@@ -13,7 +13,7 @@ body {
   justify-content: center; /* sets distribution of items along the main axis of the flex line */
 }
 
-#home-btn {
+.home-btn {
   height: 24px;
   width: 24px;
   margin-bottom: 3px;
@@ -21,7 +21,7 @@ body {
   background-image: url(../assets/home.svg); 
 }
 
-#page-title {
+.page-title {
   text-align: center;
   font-size: 24px;
   letter-spacing: 0.2em; /* spacing between each letter, where em is a unit representing the font-size for that element. in theory 1em equals the width of a lowercase m */
