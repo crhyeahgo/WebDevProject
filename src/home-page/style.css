@@ -28,6 +28,9 @@ body {
 
 .menu-option {
   margin: 30px;
+ /* display: flex;
+  flex-direction: column;
+  justify-content: center;*/
 }
 
 .menu-btn {
@@ -57,9 +60,9 @@ body {
 
 .menu-btn-text {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: x-small;
+  font-size: 11px;
   text-align: center;
   padding: 2px;
   text-wrap: pretty;
-  width: 80px;
+  text-align: center;
 }

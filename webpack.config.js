@@ -9,8 +9,8 @@ module.exports = {
       filename: 'main.js'
     },
     personalGrowthTracker: {
-      import: path.resolve(__dirname, "./src/personal-growth-tracker/index.ts"),
-      filename: 'personal-growth-tracker/index.js'
+      import: path.resolve(__dirname, "./src/personal-growth/index.ts"),
+      filename: 'personal-growth/index.js'
     }
   },
   mode: 'development',
@@ -45,8 +45,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Personal Growth Tracker Page',
-      template: path.resolve(__dirname, './src/personal-growth-tracker/index.html'),
-      filename: 'personal-growth-tracker/index.html', // Output filename
+      template: path.resolve(__dirname, './src/personal-growth/index.html'),
+      filename: 'personal-growth/index.html', // Output filename
       chunks: ['personalGrowthTracker'],  // Create script tag for only the personal growth tracker bundle
     }),
   ],
