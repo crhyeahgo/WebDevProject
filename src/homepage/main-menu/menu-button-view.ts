@@ -1,10 +1,27 @@
+export interface MenuButtonViewSpecifier {
+  /**
+   * Path to launch the specific application page.
+   */
+  pagePath: string;
+
+  /**
+   * Text to show under the specific menu button.
+   */
+  buttonCaption: string;
+
+  /**
+   * Parent HTML element
+   */
+  parentElement: HTMLElement;
+}
+
 export class MenuButtonView {
   protected readonly wrapperElement: HTMLElement = document.createElement('div');
-  protected readonly butttonElement: HTMLElement = document.createElement('div');
+  protected readonly buttonElement: HTMLElement = document.createElement('div');
   protected readonly buttonImageElement: HTMLElement = document.createElement('div');
   protected readonly buttonCaptionElement: HTMLElement = document.createElement('div');
 
-  constructor(private pagePath: string, private btnCaption: string) {
+  constructor(private specifier: MenuButtonViewSpecifier) {
   }
 
   view(): void {
@@ -12,7 +29,8 @@ export class MenuButtonView {
     this.createMenuButtonElement();
 
     // Add menu button action
-    this.butttonElement.addEventListener('click', () => this.onMenuButtonClicked(this.pagePath));
+    const pagePath = this.specifier.pagePath;
+    this.buttonElement.addEventListener('click', () => this.onMenuButtonClicked(pagePath));
   }
 
   stopView(): void {
@@ -21,20 +39,20 @@ export class MenuButtonView {
   createMenuButtonElement() {
     // Add classes to button's elements
     this.wrapperElement.classList.add('menu-btn-wrapper');
-    this.butttonElement.classList.add('menu-btn');
+    this.buttonElement.classList.add('menu-btn');
     this.buttonImageElement.classList.add('menu-btn-image');
     this.buttonCaptionElement.classList.add('menu-btn-caption');
 
     // Add button caption text
-    this.buttonCaptionElement.innerHTML = this.btnCaption;
+    this.buttonCaptionElement.innerHTML = this.specifier.buttonCaption;
 
     // Add button and caption to wrapper element
-    this.butttonElement.append(this.buttonImageElement);
-    this.wrapperElement.append(this.butttonElement);
+    this.buttonElement.append(this.buttonImageElement);
+    this.wrapperElement.append(this.buttonElement);
     this.wrapperElement.append(this.buttonCaptionElement);
 
-    const mainMenu = document.getElementById('main-menu'); // TODO this should be configurable by caller
-    mainMenu!.appendChild(this.wrapperElement);
+    // Add button to menu
+    this.specifier.parentElement!.appendChild(this.wrapperElement);
   }
   
   /**
@@ -43,5 +61,4 @@ export class MenuButtonView {
   private onMenuButtonClicked(pagePath: string) {
     location.replace(pagePath);
   }
-
 }

@@ -1,12 +1,21 @@
 import { HomeButtonView } from './home-button-view'
-import { PageTitleView } from './page-title-view';
+import { PageTitleView, PageTitleViewSpecifier } from './page-title-view';
 
 export class NavBarDecorator {
   protected readonly homeButtonView = new HomeButtonView();
-  protected readonly pageTitleView = new PageTitleView();
+  protected pageTitleView!: PageTitleView;
+
+  constructor() {
+
+
+  }
 
   init(): void {
-
+    const pageTitleSpecifier: PageTitleViewSpecifier = {
+      parentElement: document.getElementById('nav-bar') as HTMLElement,
+      title: 'PERSONAL GROWTH',
+    }
+    this.pageTitleView = new PageTitleView(pageTitleSpecifier);
   }
 
   enable(): void {
