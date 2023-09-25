@@ -6,7 +6,7 @@ body {
   height: 100vh;
 }
 
-#menu-title {
+#homepage-title {
   margin: 35px;
   text-align: center;
   font-size: 72px;
@@ -16,7 +16,7 @@ body {
   flex: 0;
 }
 
-#menu {
+#main-menu {
   background-color: rgb(245 245 245 / 65%); /* color is whitesmoke, percentage is the opacity value */
   margin: 0 15px 30px 15px; /* margins are outside of border. param order is like a clock: top, right, bottom, left */
   padding: 20px; /* padding is inside of the border */
@@ -26,7 +26,7 @@ body {
   flex-wrap: wrap;
 }
 
-.menu-option {
+.menu-btn-wrapper {
   margin: 30px;
  /* display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ body {
   background-image: url(../assets/smiley.svg); 
 }
 
-.menu-btn-text {
+.menu-btn-caption {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   text-align: center;
