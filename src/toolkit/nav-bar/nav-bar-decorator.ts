@@ -7,7 +7,6 @@ export class NavBarDecorator {
 
   constructor() {
 
-
   }
 
   init(): void {

@@ -1,6 +1,7 @@
+import { Decorator } from '../../toolkit';
 import { HomepageTitleView } from './homepage-title-view'
 
-export class HomepageTitleDecorator {
+export class HomepageTitleDecorator extends Decorator {
   protected readonly homepageTitleView = new HomepageTitleView();
 
   init(): void {

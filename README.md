@@ -2,21 +2,24 @@
 Exploration project to learn web development principles
 
 # Tasks
-Current focuses:  
-- Styling main webpage
-- Serving app through GitHub Pages or AWS
+Current focuses:
+- Add first database component to app
+  - Personal growth page takes user input
+  - Save user input to a database
+  - Load user input from database
 
 A list of tasks to explore if desired:
-- Decide app functionality. Diagram?
-- Implement decorator pattern
+- Update homepage & main-menu to do proper mvc design with a controller, instead of using view for everything
+- Add eslinter to solution
+- User authentication & authorization
 - Implement micro-frontend architecture using Webpack
 - Implement node micro-service
 - Implement API doc generation and API doc hosting
-- Add database element
 - Add image rendering/storage component
 - Integrate into Github CI/CD
+- Serving app through GitHub Pages or AWS
 
-Other techs to possibly explore:
+Other technologies to possibly explore:
 - Spring boot
 - Java micro-service
 - Bring into cloud
@@ -24,6 +27,8 @@ Other techs to possibly explore:
 
 Completed Tasks:
 - Build a starter app
+- Styling main webpage
+- Implement decorator pattern
 
 # Task Notes
 ## Build a Starter App
