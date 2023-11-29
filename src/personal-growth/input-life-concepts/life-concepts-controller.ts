@@ -19,7 +19,8 @@ export class LifeConceptsController  {
     console.log(JSON.stringify(response));
     */
 
-   // return JSON.stringify(response.json());
-    return 'this will eventually show something loaded from the cloud...';
+    // Fetch basic file from S3 (public access is enabled)
+    const response = await fetch('https://hoo-webdevproject.s3.us-east-2.amazonaws.com/temp.txt');
+    return response.text();
   }
 }
