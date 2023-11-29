@@ -5,8 +5,12 @@ Exploration project to learn web development principles
 Current focuses:
 - Add first database component to app
   - Personal growth page takes user input
-  - Save user input to a database
-  - Load user input from database
+  - Load user input from AWS S3
+  - Save user input to AWS S3
+  - Turn off public access to S3 bucket and instead use token from authorized user
+  - Change bucket to use bucket policies and be bucket owner enforced, not preferred
+
+
 
 A list of tasks to explore if desired:
 - Update homepage & main-menu to do proper mvc design with a controller, instead of using view for everything

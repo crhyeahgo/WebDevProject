@@ -2,7 +2,7 @@
   flex: 1; /* grow flex area to fill entire space */
 }
 
-.save-btn {
+.action-btn {
   background-color: rgb(255, 212, 72);
   padding: 10px;
   border-radius: 12px; /* radius for rounded corners */
