@@ -4,13 +4,11 @@ Exploration project to learn web development principles
 # Tasks
 Current focuses:
 - Add first database component to app
-  - Personal growth page takes user input
-  - Load user input from AWS S3
-  - Save user input to AWS S3
+  - Get aws sdk s3 client working - need to figure out how to set credentials properly
   - Turn off public access to S3 bucket and instead use token from authorized user
   - Change bucket to use bucket policies and be bucket owner enforced, not preferred
-
-
+  - Load user input from AWS S3
+  - Save user input to AWS S3
 
 A list of tasks to explore if desired:
 - Update homepage & main-menu to do proper mvc design with a controller, instead of using view for everything
@@ -33,6 +31,7 @@ Completed Tasks:
 - Build a starter app
 - Styling main webpage
 - Implement decorator pattern
+- Containerize app in docker image
 
 # Task Notes
 ## Build a Starter App
