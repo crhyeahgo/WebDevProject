@@ -3,14 +3,17 @@ Exploration project to learn web development principles
 
 # Tasks
 Current focuses:
+- Build project in CI pipeline
+
+A list of tasks to explore if desired:
+- Host project in Github Pages
+- Get probject deployed in k8s (kind cluster?)
 - Add first database component to app
   - Get aws sdk s3 client working - need to figure out how to set credentials properly
   - Turn off public access to S3 bucket and instead use token from authorized user
   - Change bucket to use bucket policies and be bucket owner enforced, not preferred
   - Load user input from AWS S3
   - Save user input to AWS S3
-
-A list of tasks to explore if desired:
 - Update homepage & main-menu to do proper mvc design with a controller, instead of using view for everything
 - Add eslinter to solution
 - User authentication & authorization
