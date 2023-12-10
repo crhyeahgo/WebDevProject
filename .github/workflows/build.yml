@@ -1,12 +1,14 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
-# Build and deploy when a push occurs on the main branch
-# A separate workflow exists for building only for dev branches
+# Build when a push occurs on any branch except the main branch
+# A separate workflow exists for building & deploying on the main branch
 on:
   push:
-    branches: ["main"]
-
+    branches:
+      - '*'
+      - '!main'
+    
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
