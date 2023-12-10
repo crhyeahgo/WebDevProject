@@ -1,8 +1,16 @@
 import { Decorator } from '../../toolkit';
-import { MainMenuView } from './main-menu-view'
+import { MainMenuView, MainMenuViewSpecifier } from './main-menu-view'
 
 export class MainMenuDecorator extends Decorator {
-  protected readonly mainMenuView = new MainMenuView();
+  protected readonly mainMenuView: MainMenuView;
+
+  constructor() {
+    super();
+    const viewSpecifier: MainMenuViewSpecifier = {
+      appBasePath: location.href,
+    }
+    this.mainMenuView = new MainMenuView(viewSpecifier);
+  }
 
   init(): void {
 

@@ -1,9 +1,13 @@
 import { MenuButtonView, MenuButtonViewSpecifier } from "./menu-button-view";
 
+export interface MainMenuViewSpecifier {
+  appBasePath: string;  // Base path for the app (localhost, https://crhyeahgo.github.io/WebDevProject/, etc)
+}
+
 export class MainMenuView {
   private readonly buttonViews: MenuButtonView[] = [];
 
-  constructor() {
+  constructor(private specifier: MainMenuViewSpecifier) {
   }
 
   view(): void {
@@ -18,7 +22,7 @@ export class MainMenuView {
   addPersonalGrowthPageBtn(): void {
     const personalGrowthSpecifier: MenuButtonViewSpecifier = {
       parentElement: document.getElementById('main-menu') as HTMLElement,
-      pagePath: '/personal-growth/',
+      pagePath: `${this.specifier.appBasePath}personal-growth/`,
       buttonCaption: 'Personal Growth',
     };
     const personalGrowthBtn = new MenuButtonView(personalGrowthSpecifier);
@@ -28,7 +32,7 @@ export class MainMenuView {
   addPageTwoBtn(): void {
     const pageTwoSpecifier: MenuButtonViewSpecifier = {
       parentElement: document.getElementById('main-menu') as HTMLElement,
-      pagePath: '/',
+      pagePath: `${this.specifier.appBasePath}`,
       buttonCaption: 'Page 2',
     };
     const pageTwoBtn = new MenuButtonView(pageTwoSpecifier);
@@ -38,7 +42,7 @@ export class MainMenuView {
   addPageThreeBtn(): void {
     const pageThreeSpecifier: MenuButtonViewSpecifier = {
       parentElement: document.getElementById('main-menu') as HTMLElement,
-      pagePath: '/',
+      pagePath: `${this.specifier.appBasePath}`,
       buttonCaption: 'Page 3',
     };
     const pageThreeBtn = new MenuButtonView(pageThreeSpecifier);
