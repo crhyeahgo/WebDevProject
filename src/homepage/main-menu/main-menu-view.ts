@@ -28,7 +28,7 @@ export class MainMenuView {
   addPageTwoBtn(): void {
     const pageTwoSpecifier: MenuButtonViewSpecifier = {
       parentElement: document.getElementById('main-menu') as HTMLElement,
-      pagePath: '/',
+      pagePath: './',
       buttonCaption: 'Page 2',
     };
     const pageTwoBtn = new MenuButtonView(pageTwoSpecifier);
@@ -38,7 +38,7 @@ export class MainMenuView {
   addPageThreeBtn(): void {
     const pageThreeSpecifier: MenuButtonViewSpecifier = {
       parentElement: document.getElementById('main-menu') as HTMLElement,
-      pagePath: '/',
+      pagePath: './',
       buttonCaption: 'Page 3',
     };
     const pageThreeBtn = new MenuButtonView(pageThreeSpecifier);
