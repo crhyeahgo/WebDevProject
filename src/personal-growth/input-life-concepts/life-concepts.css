@@ -1,0 +1,11 @@
+.text-input {
+  flex: 1; /* grow flex area to fill entire space */
+}
+
+.action-btn {
+  background-color: rgb(255, 212, 72);
+  padding: 10px;
+  border-radius: 12px; /* radius for rounded corners */
+  border-style: groove;
+  border-color: #a700a7;
+}

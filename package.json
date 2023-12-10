@@ -5,7 +5,10 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --config webpack.config.js"
+    "start": "webpack serve --config webpack.config.js",
+    "docker:build": "docker build -f ./docker/Dockerfile . -t char_image",
+    "docker:start": "docker run -d -p 80:8080 --name char_app char_image",
+    "docker:clean": "docker stop char_app && docker rm char_app && docker rmi char_image"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,8 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.420.0",
+    "@aws-sdk/credential-provider-env": "^3.460.0",
     "ts-loader": "^9.4.3",
     "typescript": "^5.0.4"
   }

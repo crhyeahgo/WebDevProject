@@ -1,0 +1,68 @@
+body {
+  background-image: url(../assets/stardew-background.png);
+  background-size: cover; /* scales the origin image so that it covers background positioning area, (some parts may extend beyond area */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#homepage-title {
+  margin: 35px;
+  text-align: center;
+  font-size: 72px;
+  letter-spacing: 0.2em; /* spacing between each letter, where em is a unit representing the font-size for that element. in theory 1em equals the width of a lowercase m */
+  font-weight: 700; /* scale from 1-1000 where 1000 is the most bold */
+  text-shadow: gold 2px 2px 3px; /* parameters: color, x-offset, y-offset, blur radius */
+  flex: 0;
+}
+
+#main-menu {
+  background-color: rgb(245 245 245 / 65%); /* color is whitesmoke, percentage is the opacity value */
+  margin: 0 15px 30px 15px; /* margins are outside of border. param order is like a clock: top, right, bottom, left */
+  padding: 20px; /* padding is inside of the border */
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu-btn-wrapper {
+  margin: 30px;
+ /* display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+}
+
+.menu-btn {
+  background-color: rgb(255, 212, 72);
+  padding: 10px;
+  border-radius: 12px; /* radius for rounded corners */
+  border-style: groove;
+  border-color: #a700a7;
+}
+
+/* hover is a user action pseudo-class applied to menu-btn when element is hovered */
+.menu-btn:hover {
+  background-color: rgb(236, 197, 67);
+}
+
+/* active is a user action pseudo-class applied to menu-btn when button is currently activated by user input (mouse button down or touch tap) */
+.menu-btn:active {
+  box-shadow: inset 0px 0px 5px rgb(95, 79, 27); /* inset property puts shadow inside element. px parameters: x-offset, y-offset, blur radius */
+}
+
+.menu-btn-image {
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+  background-image: url(../assets/smiley.svg); 
+}
+
+.menu-btn-caption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  text-align: center;
+  padding: 2px;
+  text-wrap: pretty;
+  text-align: center;
+}
