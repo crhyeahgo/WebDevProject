@@ -22,10 +22,12 @@ export class HomeButtonView {
   }
 
   /**
-   * Navigates back to home page
+   * Navigates back to home page. Assumes that the home page is one level up from current page.
    */
   private onClickHomeButton() {
-    location.replace('/');
+    const url = location.href;
+    const mainMenuUrl = url.substring(0, url.lastIndexOf('/')); // Removes text past final slash (moves up one dir)
+    location.assign(mainMenuUrl);
   }
 
 }

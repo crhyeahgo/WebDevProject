@@ -59,6 +59,6 @@ export class MenuButtonView {
    * Navigates to specific app page
    */
   private onMenuButtonClicked(pagePath: string) {
-    location.replace(pagePath);
+    location.assign(pagePath);
   }
 }

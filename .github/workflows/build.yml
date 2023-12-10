@@ -1,12 +1,14 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
-# Build and deploy when a push occurs on the main branch
-# A separate workflow exists for building only for dev branches
+# Build when a push occurs on any branch except the main branch
+# A separate workflow exists for building & deploying on the main branch
 on:
   push:
-    branches: ["main"]
-
+    branches:
+      - '*'
+      - '!main'
+    
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -20,16 +22,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  buildanddeploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -38,11 +35,3 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          # Upload only the content in the dist directory. Github pages automatically looks for index.html
-          path: './dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
