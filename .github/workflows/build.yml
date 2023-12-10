@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Build dev branch
 
 # Build when a push occurs on any branch except the main branch
 # A separate workflow exists for building & deploying on the main branch
