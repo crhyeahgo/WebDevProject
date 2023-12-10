@@ -22,7 +22,7 @@ export class MainMenuView {
   addPersonalGrowthPageBtn(): void {
     const personalGrowthSpecifier: MenuButtonViewSpecifier = {
       parentElement: document.getElementById('main-menu') as HTMLElement,
-      pagePath: `${this.specifier.appBasePath}personal-growth/`,
+      pagePath: `${this.specifier.appBasePath}personal-growth`,
       buttonCaption: 'Personal Growth',
     };
     const personalGrowthBtn = new MenuButtonView(personalGrowthSpecifier);
