@@ -58,10 +58,10 @@ export class LifeConceptsView extends View {
     this.controller.saveTextToStorage(text)
   }
 
- private async onClickLoadBtn() {
+ private onClickLoadBtn() {
     console.log('Load button clicked for Life Concepts');
 
-    const text = await this.controller.loadTextFromStorage();
+    const text = this.controller.loadTextFromStorage();
     this.textInputElement.value = text;
 
   }

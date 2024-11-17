@@ -1,13 +1,12 @@
 # WebDevProject
-Exploration project to learn web development principles
+Exploration project to further my web devlopment skills
 
 # Tasks
-Current focuses:
-- Build project in CI pipeline
+Current focuses: TBD
 
 A list of tasks to explore if desired:
-- Host project in Github Pages
-- Get probject deployed in k8s (kind cluster?)
+- Remove .map files in deployment build
+- Support app in k8s (kind cluster?)
 - Add first database component to app
   - Get aws sdk s3 client working - need to figure out how to set credentials properly
   - Turn off public access to S3 bucket and instead use token from authorized user
@@ -21,8 +20,6 @@ A list of tasks to explore if desired:
 - Implement node micro-service
 - Implement API doc generation and API doc hosting
 - Add image rendering/storage component
-- Integrate into Github CI/CD
-- Serving app through GitHub Pages or AWS
 
 Other technologies to possibly explore:
 - Spring boot
@@ -35,6 +32,8 @@ Completed Tasks:
 - Styling main webpage
 - Implement decorator pattern
 - Containerize app in docker image
+- Build project in CI pipeline thorugh GitHub Actions
+- Deploy project in Github Pages
 
 # Task Notes
 ## Build a Starter App

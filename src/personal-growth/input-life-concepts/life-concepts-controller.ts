@@ -6,7 +6,7 @@ export class LifeConceptsController  {
     // TODO
   }
 
-  async loadTextFromStorage(): Promise<string> {
+  loadTextFromStorage(): string {
     // TODO - move this to a micro-service...?
     // Create an S3 client in the Ohio Region
    /* const s3Client = new S3Client({
@@ -20,7 +20,9 @@ export class LifeConceptsController  {
     */
 
     // Fetch basic file from S3 (public access is enabled)
-    const response = await fetch('https://hoo-webdevproject.s3.us-east-2.amazonaws.com/temp.txt');
-    return response.text();
+    // const response = await fetch('https://hoo-webdevproject.s3.us-east-2.amazonaws.com/temp.txt');
+    // return response.text();
+
+    return 'This is hardcoded, not from S3 because I don\'t want to pay money';
   }
 }
